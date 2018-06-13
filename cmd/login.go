@@ -76,7 +76,7 @@ func loginSetup(ctx *cli.Context) error {
 
 	path := ctx.GlobalString("cf")
 	if path == "" {
-		path = os.ExpandEnv("${HOME}/.rancher/cli2.json")
+		path = os.ExpandEnv("${HOME}/.rancher-dev/cli2.json")
 	}
 
 	cf, err := loadConfig(path)

@@ -231,7 +231,7 @@ func loadConfig(path string) (config.Config, error) {
 func lookupConfig(ctx *cli.Context) (*config.ServerConfig, error) {
 	path := ctx.GlobalString("config")
 	if path == "" {
-		path = os.ExpandEnv("${HOME}/.rancher/cli2.json")
+		path = os.ExpandEnv("${HOME}/.rancher-dev/cli2.json")
 	}
 
 	cf, err := loadConfig(path)
